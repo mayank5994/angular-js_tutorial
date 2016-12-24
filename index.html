@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,26 +8,27 @@
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
-    <script src="angular.min.js"></script>
+    <!-- <script src="bower_components/angular/angular.js"></script> -->
+    <script src="angular.min.js></script>
     <script src="app.js"></script>
   </head>
-  <body ng-app="LunchCheck">
-     <div class="container">
-       <h1>Lunch Checker</h1>
-          <div ng-controller="LunchFormController">
-             <div class="form-group">
-                 <input id="lunch-menu" type="text"
-                 placeholder="list comma separated dishes you usually have for lunch"
-                 class="form-control" ng-model="lunches">
-             </div>
-             <div class="form-group">
-                 <button class="btn btn-default" ng-click="displayMessage();">Check If Too Much  {{message}}</button>
-             </div>
-             <div class="form-group message" ng-style="customStyle">
-               {{message}}
-             </div>
-          </div>
-     </div>
+<body ng-app="LunchCheck">
+   <div class="container">
+     <h1>Lunch Checker</h1>
+        <div ng-controller="LunchFormController">
+           <div class="form-group">
+               <input id="lunch-menu" type="text"
+               placeholder="list comma separated dishes you usually have for lunch"
+               class="form-control" ng-model="lunches">
+           </div>
+           <div class="form-group">
+               <button class="btn btn-default" ng-click="displayMessage();">Check If Too Much</button>
+           </div>
+           <div class="form-group message" ng-style="customStyle">
+             {{message}}
+           </div>
+        </div>
+   </div>
 
-  </body>
+</body>
 </html>
