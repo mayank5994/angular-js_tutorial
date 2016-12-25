@@ -10,12 +10,14 @@
     $scope.lunches = "";
     $scope.message = "";
     $scope.customStyle = "";
+    $scope.style2="";
 
     $scope.displayMessage = function () {
       var count = countLunches($scope.lunches);
       if (!count) {
         $scope.message = "Please enter data first";
-        $scope.customStyle = {'color': 'red', 'border':'1px solid red'};
+        $scope.customStyle = {'color': 'red'};
+        $scope.style2 = {'border':'1px solid red'};
       } else {
         if (count && count <= 3) {
           $scope.message = "Enjoy!";
@@ -25,7 +27,8 @@
           $scope.message = "Too much!";
         }
 
-        $scope.customStyle = {'color': 'green', 'border':'1px solid green'};
+        $scope.customStyle = {'color': 'green'};
+        $scope.style2 = {'border':'1px solid green'};
       }
     };
 
