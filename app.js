@@ -3,20 +3,20 @@
 
   angular.module("LunchCheck", [])
 
-  .controller('LunchFormController', LunchFormController);
+  .controller('Controller',Controller);
 
-  LunchFormController.$inject = ['$scope'];
-  function LunchFormController($scope) {
-    $scope.lunches = "";
+  Controller.$inject = ['$scope'];
+  function Controller($scope) {
+    $scope.lunch = "";
     $scope.message = "";
-    $scope.customStyle = "";
+    $scope.style1 = "";
     $scope.style2="";
 
     $scope.displayMessage = function () {
-      var count = countLunches($scope.lunches);
+      var count = countLunches($scope.lunch);
       if (!count) {
         $scope.message = "Please enter data first";
-        $scope.customStyle = {'color': 'red'};
+        $scope.style1 = {'color': 'red'};
         $scope.style2 = {'border':'1px solid red'};
       } else {
         if (count && count <= 3) {
@@ -27,7 +27,7 @@
           $scope.message = "Too much!";
         }
 
-        $scope.customStyle = {'color': 'green'};
+        $scope.style1 = {'color': 'green'};
         $scope.style2 = {'border':'1px solid green'};
       }
     };

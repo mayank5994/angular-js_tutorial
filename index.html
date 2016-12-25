@@ -14,16 +14,16 @@
 <body ng-app="LunchCheck">
    <div class="container">
      <h1>Lunch Checker</h1>
-        <div ng-controller="LunchFormController">
+        <div ng-controller="Controller">
            <div class="form-group">
                <input id="lunch-menu" type="text"
                placeholder="list comma separated dishes you usually have for lunch"
-               class="form-control" ng-model="lunches" ng-style="style2">
+               class="form-control" ng-model="lunch" ng-style="style2">
            </div>
            <div class="form-group">
                <button class="btn btn-default" ng-click="displayMessage();">Check If Too Much</button>
            </div>
-           <div class="form-group message" ng-style="customStyle">
+           <div class="form-group message" ng-style="style1">
                {{message}}
            </div>
         </div>
